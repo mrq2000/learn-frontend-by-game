@@ -4,6 +4,7 @@ export const LEVELS = [
   {
     key: 'fasfdqa2',
     path: 'console-log',
-    page: ConsoleLog
+    page: ConsoleLog,
+    title: 'Console log',
   }
 ]

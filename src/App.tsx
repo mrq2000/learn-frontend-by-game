@@ -3,6 +3,7 @@ import Home from './pages/home';
 import { LEVELS } from './constants/level';
 import PageWrapper from './PageWrapper';
 import React from 'react';
+import './App.scss';
 
 function App() {
   return (
