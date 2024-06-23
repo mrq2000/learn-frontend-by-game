@@ -1,18 +1,12 @@
-import { useEffect } from 'react';
 import { Input } from "@/components/ui/input"
 import { Button } from '@/components/ui/button';
 import { usePageContext } from '@/PageWrapper';
 import { useSignal } from "@preact/signals-react";
 
-const PASSWORD = 'learnfrontendbygame.com';
-const ConsoleLog = () => {
+const PASSWORD = 'dasdasdasdasdasd213';
+const InputPassword = () => {
   const { nextLevel, showWrongAnswerMessage, showRightAnswerMessage } = usePageContext();
   const userPassword = useSignal('');
-
-  useEffect(() => {
-    console.clear();
-    console.log(`Password: ${PASSWORD}`)
-  }, [])
 
   const handleConfirm = () => {
     if (userPassword.value === PASSWORD) {
@@ -24,18 +18,25 @@ const ConsoleLog = () => {
   }
 
   return (
-    <div className='flex flex-col gap-8'>
-      <div className='text-2xl font-semibold'>
-        Get password on your console
+    <div className='flex flex-col gap-4 w-[80%] max-w-[600px] items-center'>
+      <div className='text-2xl font-semibold text-center'>
+       This is the password 
       </div>
-      <Input placeholder='Enter password'  onChange={(e) => {
+
+      <div className='text-2xl'>
+        ↓
+      </div>
+      <Input value={PASSWORD} type='password' className='max-w-[400px]' disabled style={{ borderColor: 'teal' }} />
+    
+      <Input placeholder='Enter password' className='max-w-[400px] mt-8' onChange={(e) => {
         userPassword.value = e.target.value
       }} />
-      <Button onClick={handleConfirm}>
+
+      <Button onClick={handleConfirm} className='max-w-[300px] mt-8'>
         Confirm
       </Button>
     </div>
   )
 };
 
-export default ConsoleLog;
+export default InputPassword;

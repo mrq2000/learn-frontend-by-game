@@ -1,0 +1,19 @@
+.light {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.light-off {
+  background-color: grey;
+}
+
+body {
+  --gold-text: lch(85% 82.34 80.104);
+  --gold-shadow: lch(80% 82.34 80.104/.7);
+}
+
+.light-on {
+  background-color: yellow;
+  filter: drop-shadow(0 0 5px var(--gold-shadow)) drop-shadow(0 0 20px var(--gold-shadow));
+}
