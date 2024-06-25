@@ -14,7 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       vertical: 'top',
       horizontal: 'left',
     }}
-      preventDuplicate={true}
       autoHideDuration={4000}
       maxSnack={2}
     >

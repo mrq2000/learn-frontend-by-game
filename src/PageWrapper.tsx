@@ -20,8 +20,8 @@ interface PageWrapper {
 }
 const PageWrapper: FC<PropsWithChildren<PageWrapper>> = ({ pageKey, children, activeLevel }) => {
   const [value, setValue] = useLocalStorage('level')
-  const currentLevel = LEVELS.findIndex(level => level.key === value);
-  const pageLevel = LEVELS.findIndex(level => level.key === pageKey);
+  const currentLevel = LEVELS.findIndex(level => level.path === value);
+  const pageLevel = LEVELS.findIndex(level => level.path === pageKey);
   const navigate = useNavigate();
 
   if (currentLevel < activeLevel) {
@@ -36,7 +36,7 @@ const PageWrapper: FC<PropsWithChildren<PageWrapper>> = ({ pageKey, children, ac
         return;
       }
       if (activeLevel == currentLevel) {
-        setValue(LEVELS[activeLevel + 1].key)
+        setValue(LEVELS[activeLevel + 1].path)
       }
       navigate(LEVELS[activeLevel + 1].path);
     },

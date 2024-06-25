@@ -12,7 +12,7 @@ const PAUSE_FOR = 1500;
 const Home = () => {
   const navigate = useNavigate();
   const [level, setValue] = useLocalStorage('level');
-  const currentLevel = LEVELS.findIndex(lev => lev.key === level);
+  const currentLevel = LEVELS.findIndex(lev => lev.path === level);
   
   useEffect(() => {
     const el = document.getElementById('text-typing');
@@ -63,7 +63,7 @@ const Home = () => {
       <Button
         onClick={() => {
           const level = currentLevel == -1 ? 0 : currentLevel;
-          setValue(LEVELS[level].key);
+          setValue(LEVELS[level].path);
           navigate(LEVELS[level].path);
         }}
         size={'lg'}

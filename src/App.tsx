@@ -18,10 +18,10 @@ function App() {
       <Route path="/" element={<Home />} />
       {LEVELS.map((level, index) => (
         <Route
-          key={level.key}
+          key={level.path}
           path={level.path}
           element={
-            <PageWrapper pageKey={level.key} activeLevel={index}>
+            <PageWrapper pageKey={level.path} activeLevel={index}>
               <div className='flex flex-1 flex-col items-center justify-center px-4 py-2 w-full h-full min-h-[100vh]'>
                 <Logo />
                 <div className='text-lg mb-16'>
