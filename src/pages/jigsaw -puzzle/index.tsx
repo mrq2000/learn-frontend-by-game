@@ -1,25 +1,8 @@
-import { Button } from '@/components/ui/button';
-import { usePageContext } from '@/PageWrapper';
-import { useSignal } from '@preact/signals-react';
-// import img from './img.png';
 import { useEffect } from 'react';
 
 const PASSWORD = 'asdasd2123123asd';
 
 const PuzzleGame = () => {
-  const { nextLevel, showWrongAnswerMessage, showRightAnswerMessage } =
-    usePageContext();
-  const userPassword = useSignal('');
-
-  const handleConfirm = () => {
-    if (userPassword.value === PASSWORD) {
-      showRightAnswerMessage();
-      nextLevel();
-    } else {
-      showWrongAnswerMessage();
-    }
-  };
-
   useEffect(() => {
     const btn = document.getElementById('btn1432');
     if (btn) {
