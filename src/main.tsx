@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import App from './App.tsx'
 import './index.css';
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -17,11 +17,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       autoHideDuration={4000}
       maxSnack={2}
     >
-      <BrowserRouter basename={'/'}>
+      <HashRouter>
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
           <App />
         </ThemeProvider>
-      </BrowserRouter>
+      </HashRouter>
     </SnackbarProvider>
   </React.StrictMode>,
 )

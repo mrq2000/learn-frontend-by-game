@@ -22,7 +22,9 @@ const CustomEvent = () => {
 
   useEffect(() => {
     const logLink = () => {
-      console.log(PASSWORD);
+      console.log(
+        'Go to this post to get the password: https://x.com/kai_pham_dev/status/1806044018096456165'
+      );
     }
     window.addEventListener('getPassword', logLink);
     return () => {
