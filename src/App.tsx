@@ -5,6 +5,7 @@ import PageWrapper from './PageWrapper';
 import React from 'react';
 
 import './App.scss';
+import MyX from './components/myX';
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -28,6 +29,10 @@ function App() {
                   Level {index + 1}: {level.title}
                 </div>
                 {React.createElement(level.page)}
+
+                <div className='fixed top-4 right-4' >
+                  <MyX />
+                </div>
               </div>
             </PageWrapper>
           }
