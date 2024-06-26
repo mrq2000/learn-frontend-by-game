@@ -46,11 +46,6 @@ export const LEVELS = [
     title: 'Home Page',
   },
   {
-    path: '/base64-img',
-    page: Base64Img,
-    title: 'Base64 Image',
-  },
-  {
     path: '/local-storage',
     page: LocalStorage,
     title: 'Local Storage',
@@ -59,6 +54,11 @@ export const LEVELS = [
     path: '/cookie',
     page: CookieExpires,
     title: '🍪',
+  },
+  {
+    path: '/base64-img',
+    page: Base64Img,
+    title: 'Base64 Image',
   },
   {
     path: '/change-window-size',

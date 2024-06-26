@@ -7,7 +7,6 @@ import { useMemo } from 'react';
 //   const lightElements = document.getElementsByClassName('light');
 //   for (let i = 0, max = lightElements.length; i < max; i++) {
 //     lightElements[i].classList.add('light-on')
-    
 //   }
 // }
 const TurnOnLight = () => {
